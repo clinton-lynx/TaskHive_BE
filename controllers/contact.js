@@ -1,6 +1,6 @@
 const contactSchema = require('../models/contact.js');
 
-exports.submitForm = async (req, res, next) => {
+const submitForm = async (req, res, next) => {
     try {
         const { name, email,subject, message } = req.body;
 
@@ -26,3 +26,8 @@ exports.submitForm = async (req, res, next) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 };
+
+
+
+
+module.exports = {submitForm}

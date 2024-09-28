@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const contactsController = require('../controllers/contact');
+const {submitForm} = require('../controllers/contact');
 
-router.post('/contact', contactsController.submitForm);
+router.post('/contact', submitForm);
 router.get('/', (req,res) =>{
     res.send("success")
 });
