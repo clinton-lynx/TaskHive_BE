@@ -24,7 +24,7 @@ const register = async (req, res) => {
       school,
       idCardPhoto,
     });
-    sendSuccessMessage(email);
+    sendSuccessMessage(writer.email, writer.name);
 
     res.status(201).json({
       success: true,
